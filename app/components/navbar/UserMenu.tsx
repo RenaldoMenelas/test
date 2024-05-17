@@ -1,8 +1,10 @@
 'use client'
-import React from 'react'
-import{AiOutlineMenu} from 'react-icons/ai'
+import { useState } from 'react'
+import{AiOutlineMenu} from 'react-icons/ai';
+import Avatar from '../Avatar';
 
 const UserMenu = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="relative">
             <div className='flex flex-row items-center gap-3'>
@@ -41,12 +43,14 @@ const UserMenu = () => {
                     "
                 >
                     <AiOutlineMenu />
-                    
+                    <div className="hidden md:block">
+                        <Avatar />
+                    </div>
                 </div>
             </div>
             
         </div>
     )
-}
+};
 
 export default UserMenu
