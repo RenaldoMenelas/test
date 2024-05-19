@@ -183,6 +183,7 @@ const handleClose = useCallback(() => {
                           onClick={handleSubmit}
                         />
                     </div>
+                    {footer}
                 </div>
              </div>
              </div>
