@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Modal title="Sign up dummy" isOpen />
+        <Modal title="Hello World!" isOpen />
         <Navbar />
         {children}
       </body>
