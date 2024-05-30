@@ -13,8 +13,8 @@ interface UserMenuProps{
     
 
 const UserMenu: React.FC<UserMenuProps> = ({
-currentUser
-}) => {
+    currentUser
+}) => {      
     const registerModal = useRegisterModal();
     const loginModal = useLoginModal();
     const [isOpen, setIsOpen] = useState(false);
@@ -83,34 +83,42 @@ currentUser
                 >
                     <div className="flex flex-col cursor-pointer">
                         {currentUser ? (
-                              <>
-                              <MenuItem 
-                               onClick={()=>{}}
-                               label='my trips'
-                              />
-                               <MenuItem 
-                               onClick={()=>{}}
-                               label='my favorites'
-                                />
-                                 <MenuItem 
-                               onClick={()=>{}}
-                               label='my reservations'
-                                />
-                                 <MenuItem 
-                               onClick={()=>{}}
-                               label='my properties'
-                                />
-                                   <MenuItem 
-                               onClick={()=>{}}
-                               label='Airbnb my home'
-                                />
-                                   <MenuItem 
-                               onClick={()=> signOut()}
-                               label='Logout'
-                              />
-                          </>
-                     ): (
-                <>
+                        <>  
+                
+                        <MenuItem 
+                         onClick={()=> {}}
+                         label='My trips'
+                        />
+                         <MenuItem 
+                         onClick={()=> {}}
+                         label='My favorites'
+                        />
+                                
+                
+                       <MenuItem 
+                        onClick={()=> {}}
+                        label='My reservations'
+                        />
+                      <MenuItem 
+                       onClick={()=> {}}
+                       label='My properties'
+                       />
+                                
+                     <MenuItem 
+                       onClick={()=> {}}
+                       label='Airbnb my home'
+                       />         
+                         <hr />
+                     <MenuItem 
+                      onClick={() => signOut() }
+                       label='Logout'
+                       /> 
+                            </>
+                            
+                              
+                        ): (        
+                     <>  
+                
                     <MenuItem 
                      onClick={loginModal.onOpen}
                      label='Login'
