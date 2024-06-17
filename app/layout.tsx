@@ -7,7 +7,7 @@ import RegisterModal from "./components/modals/RegisterModal";
 import LoginModal from "./components/modals/LoginModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import getCurrentUser from "./actions/getCurrentUser";
-
+import SideBar from "./components/sidebar/SideBar"
 export const metadata: Metadata = {
   title: "CoSpace",
   description: "Sharing your workspace",
@@ -30,7 +30,8 @@ export default async function RootLayout({
         <ToasterProvider />
         <LoginModal />
         <RegisterModal/>
-        <Navbar currentUser={currentUser }/>
+          <Navbar currentUser={currentUser} />
+        
         </ClientOnly>
         {children}
       </body>
