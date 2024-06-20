@@ -18,7 +18,7 @@ function Logo({}: Props) {
         className="hidden md:block cursor-pointer"
         height="100"
         width="50"
-        src="/assets/logo3.png"
+        src="/assets/logo.png"
       />
       </span>
       ce
