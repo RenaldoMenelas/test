@@ -6,8 +6,7 @@ import MenuItem from './MenuItem';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
 import { signOut } from 'next-auth/react';
-import {SafeUser} from '@/app/types'
-
+import { SafeUser } from '@/app/types';
 interface UserMenuProps{
     currentUser?: SafeUser | null
 }

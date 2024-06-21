@@ -100,7 +100,7 @@ const LoginModal = () => {
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
-  
+      
       <div
       className='
       text-neutral-500

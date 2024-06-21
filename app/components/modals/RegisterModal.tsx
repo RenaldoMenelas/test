@@ -12,7 +12,8 @@ import Heading from '../Heading';
 import Input from '../inputs/Input';
 import toast from 'react-hot-toast';
 import Button from '../Button';
-import { signIn } from 'next-auth/react'
+import { sign } from 'crypto';
+import { signIn } from 'next-auth/react';
 
 
 const RegisterModal = () => {
@@ -91,7 +92,7 @@ const RegisterModal = () => {
         icon={FcGoogle}
         onClick={() => signIn('google')}
       />
-      
+     
       <div
       className='
       text-neutral-500
