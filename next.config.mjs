@@ -3,7 +3,12 @@ const nextConfig = {
     reactStrictMode: true, // Enables strict mode for React
   swcMinify: true,
   images: {
-    domains: ['lh3.googleusercontent.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+    ],
   },
 };
 
