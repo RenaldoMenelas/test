@@ -32,7 +32,9 @@ export default async function RootLayout({
         <RentModal/>
         <LoginModal />
         <RegisterModal/>
-          <Navbar currentUser={currentUser} />
+          <Navbar 
+          currentUser={currentUser} 
+          />
         
         </ClientOnly>
         <div className="pb-20 pt-28">
