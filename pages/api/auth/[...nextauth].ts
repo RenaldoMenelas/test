@@ -143,6 +143,7 @@ export const authOptions: AuthOptions = {
       return true;
     },
     async jwt({ token, user }) {
+      console.log('JWT callback', {token, user});
       if (user) {
         const extendedUser = user as ExtendedUser;
         token.user = {
@@ -155,6 +156,7 @@ export const authOptions: AuthOptions = {
       return token;
     },
     async session({ session, token }) {
+      console.log('Session callback:', {session, token})
       const extendedToken = token as ExtendedToken;
       if (extendedToken.user) {
         session.user = extendedToken.user;

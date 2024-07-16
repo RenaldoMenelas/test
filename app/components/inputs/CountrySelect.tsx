@@ -1,8 +1,8 @@
 'use client';
 
 import useCountries from '@/app/hooks/useCountries';
-import { on } from 'events';
-import { FC } from 'react';
+
+
 import Select from 'react-select';
 
 export type CountrySelectValue = {

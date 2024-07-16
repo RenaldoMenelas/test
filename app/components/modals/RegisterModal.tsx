@@ -40,6 +40,8 @@ const RegisterModal = () => {
     axios.post('/api/register', data)
       .then(() => {
         registerModal.onClose();
+        loginModal.onOpen();
+        toast.success('Registration successful');
       })
       .catch((error) => {
         setErrorMessage('A user with this email already exists.');
