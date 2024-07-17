@@ -1,6 +1,5 @@
-// Ensure this file is located in the `app` directory, e.g., `app/page.tsx`
+// app/page.tsx
 
-import React from 'react';
 import getCurrentUser from './actions/getCurrentUser';
 import getListings, { IListingsParams } from './actions/getListings';
 
@@ -13,14 +12,13 @@ interface HomeProps {
   searchParams: IListingsParams;
 }
 
-// Function to fetch data
 async function fetchData(searchParams: IListingsParams) {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
   return { listings, currentUser };
 }
 
-const Home = async ({ searchParams }: HomeProps) => {
+const Home = async ({ searchParams }: { searchParams: IListingsParams }) => {
   const { listings, currentUser } = await fetchData(searchParams);
 
   if (listings.length === 0) {
